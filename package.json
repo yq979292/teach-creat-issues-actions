@@ -1,0 +1,25 @@
+{
+  "name": "study-every-homeword",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.4",
+    "octokit": "^1.7.1"
+  },
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yq979292/teach-creat-issues-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yq979292/teach-creat-issues-actions/issues"
+  },
+  "homepage": "https://github.com/yq979292/teach-creat-issues-actions#readme"
+}

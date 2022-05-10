@@ -6,20 +6,24 @@ const {Octokit} =require('octokit')
 
 // TODO autj
 const octokit = new Octokit({
-    auth: `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`
+    auth: `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`,
+    // 如果 personal access token 没有创建；或者创建删除了 401 没权限
 });
 // console.log(octokit);
 
 // octokit api create issure
 
 let res  =octokit.rest.issues.create({
-    owner: "sanzhi", // 作者
-    repo: "", // githu库
-    title: "自定义issure标题, first issure", // 标题
+    owner: "yq979292", // github的用户名,路径
+    repo: "teach-creat-issues-actions", // github仓库名；路径 
+    // ---->以上这两个没写对会 报错 404
+    title: "自定义issure标题, first issure", // 标题、
+    body:'文章主体内容。哈哈哈sucessl'
 });
 
 res.then(data=>{
-    console.log(data);
+    // console.log(data);
+    console.log('success');
 }).catch(err=>{
     console.log(err);
 })
