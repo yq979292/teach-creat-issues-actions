@@ -2,12 +2,17 @@
 // octokit 
 // 客户端请github发送所有请求，可以实现对github所有操作：例如
 // 获取用户信息，自动发布actions 发布 issure 等...
-const {Octokit} =require('octokit')
+const {Octokit} =require('octokit');
+
+const core = require('@actions/core ')
+
 
 // TODO autj
+let token = core.getInput('token');
 const octokit = new Octokit({
-    auth: `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`,
+    auth: token,
     // 如果 personal access token 没有创建；或者创建删除了 401 没权限
+    // access token  铭文传递github 会被自动三处
 });
 // console.log(octokit);
 

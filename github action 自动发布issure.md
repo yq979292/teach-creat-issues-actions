@@ -28,8 +28,9 @@ const {Octokit} =require('octokit')
 // TODO autj
 const octokit = new Octokit({
     // settings -->Developer Settings ---> pernal access token 创建 accessToken 
-    auth: `ghp_2IbruU40fp1xxyRSHmplgVgEX0QUSD6`,
+    auth: `ghp_fp1xxyRSHmplgVgEX0QUSD6`,
     // 如果 （personal access tokens) 没有创建；或者创建删除了 401 没权限
+    // 注意：github token 不能用明文方式展示。、
 });
 // console.log(octokit);
 
@@ -126,6 +127,8 @@ jobs:
 > 当发现 push 时候就会触发 acion
 
 
+
+
 ## 参考连接
 
 [learn-github-action](https://docs.github.com/cn/actions/learn-github-actions/events-that-trigger-workflows)
@@ -136,7 +139,13 @@ jobs:
 [octokit文档地址](https://www.npmjs.com/package/octokit)
 
 
-
+## bug记录
+- 404 注意 index.js中仓库路径
+- 401 没有访问权限，注意github安全策略，凡是提交到长裤的accessToken 都会自动三处
+   - 解决方式
+     - 1：先生成 personal access token
+     - 2: 再用 assess Token 生成一个加密的。
+     - 3：通过代码方式获取 加密的access token 并使用
 
 
 
