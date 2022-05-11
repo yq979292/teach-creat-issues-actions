@@ -1,4 +1,12 @@
-on: [push]
+# on:
+#   schedule:  # auto run github action
+#     # set auto run time
+#     # UTC time 
+#     # zh-timm = UTC - 8 
+#     #         0:00 - 8  
+#     - corn: '1 16 * * *'  
+ 
+on: [push] 
 
 jobs:
   create_issues_action:
