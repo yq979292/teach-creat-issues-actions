@@ -7,10 +7,9 @@ const {Octokit} =require('octokit');
 const core = require('@actions/core')
 
 // TODO auth
-// let token = core.getInput('token');
+let token = core.getInput('token');
 const octokit = new Octokit({
-    // auth: token,
-    auth:``,
+    auth: token,
     // access token  铭文传递github 会自动删除 
 });
 
