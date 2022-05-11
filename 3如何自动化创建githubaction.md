@@ -1,6 +1,10 @@
 # 如何自动化执行github action 实现创建issue
 
 > 我希望每天0：00 自动发布学习任务。不需要通过push 触发action
+## 参考链接
+[creat-js-action](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
+
+[learn-github-action](https://docs.github.com/cn/actions/learn-github-actions/events-that-trigger-workflows)
 
 ## 代码
 
