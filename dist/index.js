@@ -20020,16 +20020,16 @@ const {Octokit} =__nccwpck_require__(7467);
 
 const core = __nccwpck_require__(2186)
 
+// console.log(core.getInput('token'));
 
-// TODO autj
+// TODO auth
 let token = core.getInput('token');
-console.log(token);
 const octokit = new Octokit({
     auth: token,
     // 如果 personal access token 没有创建；或者创建删除了 401 没权限
     // access token  铭文传递github 会被自动三处
 });
-// console.log(octokit);
+console.log(octokit);
 
 // octokit api create issure
 
