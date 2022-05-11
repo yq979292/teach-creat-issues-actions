@@ -4,11 +4,12 @@
 // 获取用户信息，自动发布actions 发布 issure 等...
 const {Octokit} =require('octokit');
 
-const core = require('@actions/core ')
+const core = require('@actions/core')
 
 
 // TODO autj
 let token = core.getInput('token');
+console.log(token);
 const octokit = new Octokit({
     auth: token,
     // 如果 personal access token 没有创建；或者创建删除了 401 没权限
@@ -18,7 +19,7 @@ const octokit = new Octokit({
 
 // octokit api create issure
 
-let res  =octokit.rest.issues.create({
+let res = octokit.rest.issues.create({
     owner: "yq979292", // github的用户名,路径
     repo: "teach-creat-issues-actions", // github仓库名；路径 
     // ---->以上这两个没写对会 报错 404
