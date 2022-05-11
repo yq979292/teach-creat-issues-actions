@@ -5,7 +5,6 @@
 const {Octokit} =require('octokit');
 
 const core = require('@actions/core')
-// console.log(core.getInput('token'));
 
 // TODO auth
 let token = core.getInput('token');
@@ -15,15 +14,14 @@ const octokit = new Octokit({
 });
 
 // octokit api create issure
-
 let res = octokit.rest.issues.create({
     owner: "yq979292", // github的用户名,路径
     repo: "teach-creat-issues-actions", // github仓库名；路径 
 
     // ---->以上这两个没写对会 报错 404
 
-    title: "自定义issure标题, first issure", // 标题、
-    body:'文章主体内容。哈哈哈sucessl'
+    title: "测试创建action", // 标题、
+    body:'测试不是通过action 是否存在 404 问题'
 });
 
 res.then(data=>{
