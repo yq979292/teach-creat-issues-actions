@@ -10,12 +10,12 @@ const core = require('@actions/core')
 
 // TODO auth
 let token = core.getInput('token');
+console.log(token)
 const octokit = new Octokit({
     auth: token,
     // 如果 personal access token 没有创建；或者创建删除了 401 没权限
     // access token  铭文传递github 会被自动三处
 });
-console.log(octokit);
 
 // octokit api create issure
 
