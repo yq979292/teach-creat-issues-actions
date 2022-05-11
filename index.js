@@ -10,7 +10,7 @@ const core = require('@actions/core')
 
 // TODO auth
 let token = core.getInput('token');
-console.log(token)
+console.log('获取token',token)
 const octokit = new Octokit({
     auth: token,
     // 如果 personal access token 没有创建；或者创建删除了 401 没权限
