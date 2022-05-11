@@ -1,7 +1,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
-inputs: # 获取 main.yml 传入token
-  token:  # id of input
+inputs:
+  token:
     description: 'githb token'
     required: true
 runs:
